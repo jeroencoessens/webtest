@@ -1,0 +1,12 @@
+You are an expert javascript web developer with an eye for clean, pleasant css aesthetics.
+
+Please create a safari web app game about a character that is able to walk around a flat 2D world looking for animals to befriend. The controls of the character should be handled with a joystick that appears wherever the user touches the screen. Once the user holds down and drags across the screen a joystick should appear which then controls the direction of the character and makes the character walk across the world in either north, south, west or east direction.
+
+Use simple graphics, colours and emojis to display the character, animals and environment of the world. The goal for the player is to find and befriend animals that are hidden in the world.
+
+Please develop and create an interesting game loop of walking up to an animal, befriending them and adding them to your safari photo collection. The goal is to collect a team of 6 different animals and get scores based on how rare they are in the world (add a good balance for this), so different users can try the game, wander around and find interesting animals with interesting traits, rarity and personality, which should be randomly generated from a pool of possibilities.
+
+Once the player finds 6 animals the game is over and a score is awarded.
+Create the full game loop inside the ´prototype1´folder. Use the files present there, they are currenctly empty.
+
+Make no mistakes.

@@ -1,0 +1,72 @@
+# Safari Befriend - A Web App Game
+# 50 seconds
+# 1029 lines of code created
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="dark-content">
+    <meta name="apple-mobile-web-app-title" content="Safari Befriend">
+    <title>Safari Befriend - A Web App Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Game World -->
+        <div id="game-world">
+            <div id="player" class="entity player">🧑</div>
+            <div id="animals-container"></div>
+            
+            <!-- Joystick Control -->
+            <div id="joystick-container" class="joystick-container">
+                <div id="joystick-bg" class="joystick-bg"></div>
+                <div id="joystick-stick" class="joystick-stick"></div>
+            </div>
+        </div>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <!-- Score and Progress -->
+            <div id="header" class="header">
+                <div class="score-display">
+                    <span class="label">Collected:</span>
+                    <span id="animal-count">0</span>/6
+                </div>
+                <div class="score-display">
+                    <span class="label">Score:</span>
+                    <span id="score-display">0</span>
+                </div>
+            </div>
+
+            <!-- Collection View -->
+            <div id="collection-panel" class="collection-panel">
+                <div class="collection-title">Your Collection</div>
+                <div id="collected-animals" class="collected-animals"></div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="game-over-screen hidden">
+                <div class="game-over-content">
+                    <h1>Safari Complete! 🎉</h1>
+                    <p id="final-score-text">Final Score: 0</p>
+                    <div id="final-collection" class="final-collection"></div>
+                    <button id="restart-btn">Play Again</button>
+                </div>
+            </div>
+
+            <!-- Interaction Prompt -->
+            <div id="interaction-prompt" class="interaction-prompt hidden">
+                <div class="prompt-content">
+                    <div id="animal-preview" class="animal-preview"></div>
+                    <div id="animal-info" class="animal-info"></div>
+                    <button id="befriend-btn" class="befriend-btn">Befriend</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
