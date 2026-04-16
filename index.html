@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubisoft Web Prototyping Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <div>
+                    <h1>Web Prototyping Lab</h1>
+                    <span class="subtitle">AI Agent Speed &amp; Usability Testing</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <h2>About This Project</h2>
+            <p>
+                This project is a testing ground for evaluating <strong>AI coding agents</strong> in a rapid web prototyping context. Each prototype below was generated using AI-assisted development to benchmark <strong>speed</strong>, <strong>code quality</strong>, and <strong>usability</strong> of different agent configurations. The prototypes themselves (simple Safari-themed web games) serve as a consistent creative brief — the real focus is measuring how efficiently each AI agent can turn a prompt into a functional, polished web experience.
+            </p>
+        </section>
+
+        <!-- Prototype Cards -->
+        <section class="cards-section">
+            <h2>Prototypes</h2>
+            <div class="cards-grid">
+
+                <a href="prototype1/index.html" class="card">
+                    <div class="card-number">01</div>
+                    <div class="card-icon">🦁</div>
+                    <h3>Prototype 1</h3>
+                    <p class="card-desc">Safari Friends — DOM-based world with joystick controls and animal collection gameplay.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">Haiku 4.5</span>
+                        <span class="meta-tag">⏱ 2 min 4 s</span>
+                        <span class="meta-tag">430 LOC</span>
+                        <span class="meta-tag meta-tag--warn">2 prompts</span>
+                    </div>
+                    <p class="card-extra">Required a second prompt to fix broken gameplay before it was functional.</p>
+                    <span class="card-cta">Launch Prototype &rarr;</span>
+                </a>
+
+                <a href="prototype2/index.html" class="card">
+                    <div class="card-number">02</div>
+                    <div class="card-icon">🐘</div>
+                    <h3>Prototype 2</h3>
+                    <p class="card-desc">Safari Friends — Canvas-rendered variant with HUD overlay and team-building mechanics.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">Sonnet 4.6</span>
+                        <span class="meta-tag">⏱ 10 min 38 s</span>
+                        <span class="meta-tag">799 LOC</span>
+                    </div>
+                    <span class="card-cta">Launch Prototype &rarr;</span>
+                </a>
+
+                <a href="prototype3/index.html" class="card">
+                    <div class="card-number">03</div>
+                    <div class="card-icon">🦒</div>
+                    <h3>Prototype 3</h3>
+                    <p class="card-desc">Safari Pals — Canvas-based with collection bar, befriend prompts, and score system.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">Opus 4.6</span>
+                        <span class="meta-tag">⏱ 4 min 41 s</span>
+                        <span class="meta-tag">716 LOC</span>
+                    </div>
+                    <span class="card-cta">Launch Prototype &rarr;</span>
+                </a>
+
+                <a href="prototype4%20(opus%20low)/index.html" class="card">
+                    <div class="card-number">04</div>
+                    <div class="card-icon">🐆</div>
+                    <h3>Prototype 4</h3>
+                    <p class="card-desc">Safari Friends — Opus on low reasoning setting. Faster generation, leaner output.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">Opus 4.6 LOW</span>
+                        <span class="meta-tag">⏱ 2 min 56 s</span>
+                        <span class="meta-tag">591 LOC</span>
+                        <span class="meta-tag meta-tag--warn">2 prompts</span>
+                    </div>
+                    <p class="card-extra">Required a second prompt to fix broken gameplay before it was functional.</p>
+                    <span class="card-cta">Launch Prototype &rarr;</span>
+                </a>
+
+                <a href="prototype5%20(gpt)/index.html" class="card">
+                    <div class="card-number">05</div>
+                    <div class="card-icon">🦓</div>
+                    <h3>Prototype 5</h3>
+                    <p class="card-desc">Safari Friends — ChatGPT on extra-high reasoning. Longest generation, most code output.</p>
+                    <div class="card-meta">
+                        <span class="meta-tag">ChatGPT 5.4 XHIGH</span>
+                        <span class="meta-tag">⏱ 12 min 11 s</span>
+                        <span class="meta-tag">923 LOC</span>
+                    </div>
+                    <span class="card-cta">Launch Prototype &rarr;</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- AI Insights Section -->
+        <section class="insights-section">
+            <h2>AI for Web Prototyping — Best Use Cases</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>🚀 Rapid Scaffolding</h3>
+                    <p>AI agents excel at generating boilerplate HTML/CSS/JS in seconds — ideal for quickly validating a game loop, layout, or interaction without writing everything from scratch.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>🎨 Visual Iteration</h3>
+                    <p>Need three visual directions for the same feature? Agents can produce multiple styled variants in the time it takes to manually code one, making A/B exploration trivial.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>🔧 Debug &amp; Refine</h3>
+                    <p>Paste an error or describe unexpected behaviour and agents can diagnose and patch issues rapidly — particularly effective for CSS quirks and JS event handling.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>📋 Structured Prompting</h3>
+                    <p>The more detailed and structured your prompt, the better the output. Provide clear constraints (platform, controls, art style) and agents deliver closer-to-final results on the first pass.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Model Comparison Section -->
+        <section class="models-section">
+            <h2>Agent &amp; Model Comparison</h2>
+            <p class="models-intro">When choosing an AI model for coding, cost and capability trade off. Here's a quick reference for the models available and worth testing:</p>
+
+            <div class="model-table-wrapper">
+                <table class="model-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Provider</th>
+                            <th>Relative Cost</th>
+                            <th>Best For</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Claude Haiku</strong></td>
+                            <td>Anthropic</td>
+                            <td><span class="cost-badge cost-low">0.33× tokens</span></td>
+                            <td>Fast scaffolding, simple edits, high-volume tasks</td>
+                            <td><span class="status-badge tested">Tested</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Claude Sonnet</strong></td>
+                            <td>Anthropic</td>
+                            <td><span class="cost-badge cost-mid">1× tokens</span></td>
+                            <td>Balanced quality/cost — the default sweet spot for most prototyping</td>
+                            <td><span class="status-badge tested">Tested</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Claude Opus</strong></td>
+                            <td>Anthropic</td>
+                            <td><span class="cost-badge cost-high">3× tokens</span></td>
+                            <td>Complex logic, architecture decisions, nuanced debugging</td>
+                            <td><span class="status-badge tested">Tested</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ChatGPT (GPT-4o)</strong></td>
+                            <td>OpenAI</td>
+                            <td><span class="cost-badge cost-mid">~1× tokens</span></td>
+                            <td>General-purpose coding, good at explaining and iterating</td>
+                            <td><span class="status-badge pending">To Test</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gemini</strong></td>
+                            <td>Google</td>
+                            <td><span class="cost-badge cost-mid">~1× tokens</span></td>
+                            <td>Multimodal input, large context windows, code generation</td>
+                            <td><span class="status-badge pending">To Test</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="model-note">
+                <strong>Recommendation:</strong> Start with <em>Sonnet</em> for day-to-day prototyping — it hits the best balance of speed, quality, and cost. Use <em>Haiku</em> for bulk/repetitive tasks where cost matters. Reserve <em>Opus</em> for complex problems that need deeper reasoning. ChatGPT and Gemini remain strong alternatives that should be benchmarked for coding tasks — each may outperform on specific prompt styles or languages.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ubisoft — Internal Web Prototyping Lab</p>
+    </footer>
+</body>
+</html>

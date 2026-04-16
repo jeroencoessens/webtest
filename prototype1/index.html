@@ -1,68 +1,67 @@
-# Safari Befriend - A Web App Game
-# 50 seconds
-# 1029 lines of code created
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="dark-content">
-    <meta name="apple-mobile-web-app-title" content="Safari Befriend">
-    <title>Safari Befriend - A Web App Game</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Safari Friends">
+    <title>Safari Friends - Collect Animals!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
+    <div class="game-container">
         <!-- Game World -->
-        <div id="game-world">
-            <div id="player" class="entity player">🧑</div>
-            <div id="animals-container"></div>
-            
-            <!-- Joystick Control -->
-            <div id="joystick-container" class="joystick-container">
-                <div id="joystick-bg" class="joystick-bg"></div>
-                <div id="joystick-stick" class="joystick-stick"></div>
+        <div class="game-world">
+            <div class="world-viewport" id="worldViewport">
+                <!-- Game elements rendered here -->
+            </div>
+        </div>
+
+        <!-- Joystick -->
+        <div class="joystick-container" id="joystickContainer">
+            <div class="joystick-bg" id="joystickBg">
+                <div class="joystick-stick" id="joystickStick"></div>
             </div>
         </div>
 
         <!-- UI Overlay -->
-        <div id="ui-overlay">
-            <!-- Score and Progress -->
-            <div id="header" class="header">
-                <div class="score-display">
-                    <span class="label">Collected:</span>
-                    <span id="animal-count">0</span>/6
+        <div class="ui-overlay">
+            <!-- Score Display -->
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-label">Animals:</span>
+                    <span class="score-value" id="animalCount">0/6</span>
                 </div>
-                <div class="score-display">
-                    <span class="label">Score:</span>
-                    <span id="score-display">0</span>
-                </div>
-            </div>
-
-            <!-- Collection View -->
-            <div id="collection-panel" class="collection-panel">
-                <div class="collection-title">Your Collection</div>
-                <div id="collected-animals" class="collected-animals"></div>
-            </div>
-
-            <!-- Game Over Screen -->
-            <div id="game-over-screen" class="game-over-screen hidden">
-                <div class="game-over-content">
-                    <h1>Safari Complete! 🎉</h1>
-                    <p id="final-score-text">Final Score: 0</p>
-                    <div id="final-collection" class="final-collection"></div>
-                    <button id="restart-btn">Play Again</button>
+                <div class="score-item">
+                    <span class="score-label">Score:</span>
+                    <span class="score-value" id="scoreDisplay">0</span>
                 </div>
             </div>
 
-            <!-- Interaction Prompt -->
-            <div id="interaction-prompt" class="interaction-prompt hidden">
-                <div class="prompt-content">
-                    <div id="animal-preview" class="animal-preview"></div>
-                    <div id="animal-info" class="animal-info"></div>
-                    <button id="befriend-btn" class="befriend-btn">Befriend</button>
+            <!-- Collected Animals -->
+            <div class="collected-animals">
+                <div class="collection-title">🦁 Collection</div>
+                <div class="animal-slot" id="slot0"></div>
+                <div class="animal-slot" id="slot1"></div>
+                <div class="animal-slot" id="slot2"></div>
+                <div class="animal-slot" id="slot3"></div>
+                <div class="animal-slot" id="slot4"></div>
+                <div class="animal-slot" id="slot5"></div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div class="game-over-screen" id="gameOverScreen">
+            <div class="game-over-content">
+                <div class="game-over-title">🎉 Safari Complete!</div>
+                <div class="game-over-text">You've collected 6 amazing animals!</div>
+                <div class="final-score-container">
+                    <div class="final-score-label">Final Score:</div>
+                    <div class="final-score" id="finalScore">0</div>
                 </div>
+                <div class="collection-summary" id="collectionSummary"></div>
+                <button class="play-again-btn" id="playAgainBtn">Play Again</button>
             </div>
         </div>
     </div>

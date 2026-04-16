@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Safari Pals">
+    <title>Safari Pals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div id="hud-score">Score: <span id="score-value">0</span></div>
+            <div id="hud-collection"><span id="collection-count">0</span>/6 🐾</div>
+        </div>
+
+        <!-- Collection bar -->
+        <div id="collection-bar">
+            <div id="collection-slots"></div>
+        </div>
+
+        <!-- Befriend prompt -->
+        <div id="befriend-prompt" class="hidden">
+            <div id="befriend-card">
+                <div id="befriend-emoji"></div>
+                <div id="befriend-name"></div>
+                <div id="befriend-trait"></div>
+                <div id="befriend-rarity"></div>
+                <button id="befriend-btn">Befriend! 🤝</button>
+            </div>
+        </div>
+
+        <!-- Game over screen -->
+        <div id="game-over" class="hidden">
+            <div id="game-over-card">
+                <h1>🎉 Safari Complete!</h1>
+                <div id="final-team"></div>
+                <div id="final-score"></div>
+                <button id="play-again-btn">Play Again 🔄</button>
+            </div>
+        </div>
+
+        <!-- Title screen -->
+        <div id="title-screen">
+            <div id="title-card">
+                <div class="title-emoji">🌍</div>
+                <h1>Safari Pals</h1>
+                <p>Explore the wild and befriend 6 animals!</p>
+                <p class="hint">Touch & drag anywhere to move</p>
+                <button id="start-btn">Start Safari! 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

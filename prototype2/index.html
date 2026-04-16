@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Safari Friends</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- WORLD CANVAS -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div id="hudLeft">
+      <div id="teamBar">
+        <span id="teamLabel">TEAM</span>
+        <div id="teamSlots"></div>
+      </div>
+    </div>
+    <div id="hudRight">
+      <div id="scoreBox">
+        <span id="scoreLabel">SCORE</span>
+        <span id="scoreValue">0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOYSTICK -->
+  <div id="joystickOuter" class="hidden">
+    <div id="joystickInner"></div>
+  </div>
+
+  <!-- ENCOUNTER PANEL -->
+  <div id="encounterPanel" class="hidden">
+    <div id="encounterCard">
+      <div id="encounterEmoji"></div>
+      <div id="encounterName"></div>
+      <div id="encounterTrait"></div>
+      <div id="encounterRarity"></div>
+      <div id="encounterDesc"></div>
+      <div id="encounterButtons">
+        <button id="btnBefriend">🤝 Befriend</button>
+        <button id="btnLeave">🚶 Leave</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLECTION POPUP -->
+  <div id="collectionPopup" class="hidden">
+    <div id="collectionCard">
+      <div id="collectionTitle">🌟 New Friend!</div>
+      <div id="collectionEmoji"></div>
+      <div id="collectionName"></div>
+      <div id="collectionPoints">+<span id="collectionPts"></span> pts</div>
+      <button id="btnCollectionOk">Continue</button>
+    </div>
+  </div>
+
+  <!-- END SCREEN -->
+  <div id="endScreen" class="hidden">
+    <div id="endCard">
+      <div id="endTitle">Safari Complete! 🎉</div>
+      <div id="endSubtitle">Your Team</div>
+      <div id="endTeamGrid"></div>
+      <div id="endScoreRow">
+        <span>Final Score:</span>
+        <span id="endScoreVal"></span>
+      </div>
+      <div id="endRankRow">Rank: <span id="endRank"></span></div>
+      <button id="btnRestart">🔄 Play Again</button>
+    </div>
+  </div>
+
+  <!-- START SCREEN -->
+  <div id="startScreen">
+    <div id="startCard">
+      <div id="startEmoji">🦁</div>
+      <div id="startTitle">Safari Friends</div>
+      <div id="startDesc">Explore the world, find & befriend 6 animals to complete your team!</div>
+      <div id="startHint">Touch &amp; drag to walk</div>
+      <button id="btnStart">Start Adventure</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

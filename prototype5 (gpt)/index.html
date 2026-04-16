@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<title>Friend Trail Safari</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="app-shell">
+		<header class="hud-row">
+			<section class="panel brand-panel">
+				<p class="eyebrow">Pocket Safari</p>
+				<h1>Friend Trail</h1>
+				<p class="lead" id="trackerText">Touch and drag anywhere inside the meadow to summon the joystick and start exploring.</p>
+			</section>
+
+			<section class="panel score-panel" aria-label="Safari progress">
+				<div class="score-metric">
+					<span class="metric-label">Photo Score</span>
+					<strong class="metric-value" id="scoreValue">0</strong>
+				</div>
+				<div class="score-metric">
+					<span class="metric-label">Team</span>
+					<strong class="metric-value" id="teamValue">0 / 6</strong>
+				</div>
+				<div class="rarity-chip" id="rarestValue">No friends yet</div>
+			</section>
+		</header>
+
+		<main class="game-panel">
+			<section class="game-view" id="gameView" aria-label="2D safari world">
+				<div class="world" id="world">
+					<div class="decor-layer" id="decorLayer"></div>
+					<div class="animal-layer" id="animalLayer"></div>
+
+					<div class="player" id="player">
+						<div class="player-shadow"></div>
+						<div class="player-avatar" aria-hidden="true">🧑‍🌾</div>
+						<div class="player-compass" id="playerCompass">↓</div>
+						<div class="player-tag">Scout</div>
+					</div>
+				</div>
+
+				<div class="joystick" id="joystick" aria-hidden="true">
+					<div class="joystick-base"></div>
+					<div class="joystick-knob" id="joystickKnob"></div>
+				</div>
+
+				<div class="toast" id="toast" role="status" aria-live="polite"></div>
+			</section>
+		</main>
+
+		<section class="panel journal-panel" id="encounterPanel" aria-label="Field journal">
+			<div class="journal-header">
+				<div>
+					<p class="eyebrow">Field Journal</p>
+					<h2 id="encounterTitle">No animal in range</h2>
+				</div>
+				<div class="journal-pills">
+					<span class="rarity-pill" id="encounterRarity">Explorer Tip</span>
+					<span class="points-pill" id="encounterPoints">Need 6 friends</span>
+				</div>
+			</div>
+
+			<p class="journal-copy" id="encounterCopy">Sweep the map, follow the tracker, and walk close to rustling patches to reveal the animals hiding there.</p>
+
+			<button class="primary-button" id="befriendButton" type="button" disabled>Befriend</button>
+		</section>
+
+		<section class="panel collection-panel" aria-label="Safari album">
+			<div class="collection-header">
+				<div>
+					<p class="eyebrow">Safari Album</p>
+					<h2>Photo Team</h2>
+				</div>
+				<p class="collection-note">Collect six different animals. Rare finds score more, but they hide deeper in the world.</p>
+			</div>
+
+			<div class="collection-grid" id="collectionGrid"></div>
+		</section>
+
+		<section class="overlay hidden" id="endOverlay" role="dialog" aria-modal="true" aria-labelledby="endTitle">
+			<div class="overlay-card">
+				<p class="eyebrow">Trip Complete</p>
+				<h2 id="endTitle">Safari finished</h2>
+				<p class="overlay-summary" id="endSummary"></p>
+				<div class="final-team" id="finalTeam"></div>
+				<button class="primary-button primary-button--wide" id="restartButton" type="button">Play again</button>
+			</div>
+		</section>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

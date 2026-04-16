@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Safari Pals">
+<title>Safari Pals</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="game-container">
+  <canvas id="game-canvas"></canvas>
+  <div id="hud">
+    <div id="hud-top">
+      <div id="collection-count">🐾 0 / 6</div>
+      <div id="score-display">⭐ 0</div>
+    </div>
+    <div id="collection-bar"></div>
+  </div>
+  <div id="interact-prompt" class="hidden">Tap to befriend! 🤝</div>
+  <div id="animal-modal" class="hidden">
+    <div id="modal-content">
+      <div id="modal-emoji"></div>
+      <div id="modal-name"></div>
+      <div id="modal-personality"></div>
+      <div id="modal-rarity"></div>
+      <div id="modal-points"></div>
+      <button id="modal-btn">Add to Collection! 📸</button>
+    </div>
+  </div>
+  <div id="end-screen" class="hidden">
+    <div id="end-content">
+      <h1>🎉 Safari Complete!</h1>
+      <div id="end-collection"></div>
+      <div id="end-score"></div>
+      <button id="restart-btn">Play Again 🔄</button>
+    </div>
+  </div>
+  <div id="start-screen">
+    <div id="start-content">
+      <div class="start-emoji">🌍</div>
+      <h1>Safari Pals</h1>
+      <p>Explore the wild and befriend 6 animals to complete your safari photo collection!</p>
+      <p class="hint">Touch/click & drag or use WASD/arrow keys to move</p>
+      <button id="start-btn">Start Safari! 🚶</button>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
